@@ -48,6 +48,8 @@ char	*ft_strjoin(char *left_str, char *buff)
 	size_t	j;
 	char	*str;
 
+	i = -1;
+	j = 0;
 	if (!left_str)
 	{
 		left_str = (char *)malloc(1 * sizeof(char));
@@ -58,8 +60,6 @@ char	*ft_strjoin(char *left_str, char *buff)
 	str = (char *)malloc(sizeof(char) * ((ft_strlen(left_str) + ft_strlen(buff)) + 1));
 	if (str == NULL)
 		return (NULL);
-	i = -1;
-	j = 0;
 	if (left_str)
 		while (left_str[++i])
 			str[i] = left_str[i];

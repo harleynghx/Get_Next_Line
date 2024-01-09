@@ -31,7 +31,7 @@ char	*ft_read_to_left_str(int fd, char *left_str)
 		}
 		buff[rd_bytes] = '\0';
 		left_str = ft_strjoin(left_str, buff);
-		printf("%s", left_str);
+		// printf("\nleft_str =\n%s\n\n", left_str);
 	}
 	free(buff);
 	return (left_str);
@@ -51,15 +51,15 @@ char	*get_next_line(int fd)
 	left_str = ft_new_left_str(left_str);
 	return (line);
 }
-#include <fcntl.h>
- int	main(void)
- {
- 	int		fd;
-    fd = open("mytest.txt", O_RDONLY);
- 	printf("%s", get_next_line(fd));
- 	// printf("%s", get_next_line(fd));
- 	// printf("%s", get_next_line(fd));
- 	// printf("%s", get_next_line(fd));
- 	// printf("%s", get_next_line(fd));
- 	// printf("%s", get_next_line(fd));
- }
+// #include <fcntl.h>
+//  int	main(void)
+//  {
+//  	int		fd;
+//     fd = open("mytest.txt", O_RDONLY);
+//  	printf("%s", get_next_line(fd));
+//  	// printf("%s", get_next_line(fd));
+//  	// printf("%s", get_next_line(fd));
+//  	// printf("%s", get_next_line(fd));
+//  	// printf("%s", get_next_line(fd));
+//  	// printf("%s", get_next_line(fd));
+//  }

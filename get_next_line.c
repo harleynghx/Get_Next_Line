@@ -6,7 +6,7 @@
 /*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/28 23:43:27 by hang              #+#    #+#             */
-/*   Updated: 2024/01/06 21:29:44 by hang             ###   ########.fr       */
+/*   Updated: 2024/01/09 08:53:57 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ char	*ft_read_to_left_str(int fd, char *left_str)
 
 char	*get_next_line(int fd)
 {
-	char		*line;
-	static char	*left_str;
+	char *line;
+	static char *left_str;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
@@ -50,3 +50,15 @@ char	*get_next_line(int fd)
 	left_str = ft_new_left_str(left_str);
 	return (line);
 }
+// #include <fcntl.h>
+//  int	main(void)
+//  {
+//  	int		fd;
+//     fd = open("mytest.txt", O_RDONLY);
+//  	printf("%s", get_next_line(fd));
+//  	printf("%s", get_next_line(fd));
+//  	printf("%s", get_next_line(fd));
+//  	printf("%s", get_next_line(fd));
+//  	printf("%s", get_next_line(fd));
+//  	printf("%s", get_next_line(fd));
+//  }

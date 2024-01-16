@@ -1,23 +1,26 @@
+
 #include <stdio.h>
+#include <unistd.h>
 #include "get_next_line.h"
 
-void displayCallCount() {
-    // Static variable to keep track of the number of function calls
-    static int callCount = 0;
 
-    // Increment the static variable on each function call
-    callCount++;
-
-    // Display the current call count
-    printf("Function called %d times.\n", callCount);
+char *gnl(int fd)
+{
+    char *buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
+    int i = read(fd, buff, BUFFER_SIZE);
+    printf("%i\n", i);
+    return(buff);
 }
 
-int main() {
-    // Calling the function multiple times
-    displayCallCount();
-    displayCallCount();
-    displayCallCount();
-
-    return 0;
-}
-
+#include <fcntl.h>
+ int	main(void)
+ {
+ 	int		fd;
+    fd = open("mytext.txt", O_RDONLY);
+ 	printf("%s", gnl(fd));
+ 	// printf("%s", gnl(fd));
+ 	// printf("%s", get_next_line(fd));
+ 	// printf("%s", get_next_line(fd));
+ 	// printf("%s", get_next_line(fd));
+ 	// printf("%s", get_next_line(fd));
+ }

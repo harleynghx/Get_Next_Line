@@ -5,10 +5,11 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/28 23:43:23 by hang              #+#    #+#             */
-/*   Updated: 2024/01/16 18:28:30 by hang             ###   ########.fr       */
+/*   Created: 2024/01/19 08:32:33 by hang              #+#    #+#             */
+/*   Updated: 2024/01/19 08:32:34 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "get_next_line.h"
 
@@ -57,7 +58,7 @@ char	*ft_strjoin(char *left_str, char *buff)
 	}
 	if (!left_str || !buff)
 		return (NULL);
-	str = (char *)malloc(sizeof(char) * ((ft_strlen(left_str) + ft_strlen(buff)) + 1));
+	str = malloc(sizeof(char) * ((ft_strlen(left_str) + ft_strlen(buff)) + 1));
 	if (str == NULL)
 		return (NULL);
 	if (left_str)

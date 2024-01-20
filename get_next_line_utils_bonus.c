@@ -100,9 +100,9 @@ char	*cleanline(char *fd_str)
 
 char	*delete_upto_nl(char *fd_str)
 {
-	int i;
-	int j;
-	char *str;
+	int		i;
+	int		j;
+	char	*str;
 
 	i = 0;
 	while (fd_str[i] && fd_str[i] != '\n')

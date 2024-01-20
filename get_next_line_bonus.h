@@ -20,6 +20,7 @@
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 100
 # endif
+
 char	*get_next_line(int fd);
 char	*readnjoin(int fd, char *left_str);
 char	*ft_strchr(char *s, int c);

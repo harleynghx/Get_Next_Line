@@ -38,8 +38,8 @@ char	*readnjoin(int fd, char *fd_str)
 
 char	*get_next_line(int fd)
 {
-	char *line;
-	static char *fd_str[OPEN_MAX];
+	char		*line;
+	static char	*fd_str[OPEN_MAX];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
